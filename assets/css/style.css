@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
 
 /*--------------------------------------------------------------
 # General
@@ -30,7 +31,7 @@ h4,
 h5,
 h6,
 .font-primary {
-  font-family: "Raleway", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -450,4 +451,18 @@ section {
 
 #footer .credits a {
   color: #72a8bf;
+}
+
+/*--------------------------------------
+# - 3.1 Countdown section style start here
+----------------------------------------*/
+
+.timing {
+	margin-top: 30px;
+}
+.time_circles > div > h4 {
+	color: #c80815;
+}
+.time_circles > div > span {
+	color: #c80815;
 }
