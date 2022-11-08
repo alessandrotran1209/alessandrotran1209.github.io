@@ -7,7 +7,13 @@
     <title>Kỷ niệm Mobifone Service</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
-
+    <style>
+      p {
+        text-align: center;
+        margin-top: 0px;
+        display: inline;
+      }
+    </style>
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -43,9 +49,7 @@
   <body>
     <!-- ======= Header ======= -->
     <header id="header">
-      <div
-        class="container-fluid d-flex align-items-center"
-      >
+      <div class="container-fluid d-flex align-items-center">
         <div class="logo" style="width: 10vw; height: 15vh">
           <!-- <h1 class="text-light"> -->
           <!-- <a href="index.html"><img src="assets/img/MFS.png" alt="" /></a> -->
@@ -56,25 +60,26 @@
             style="max-height: 90px; margin-top: 10px;" class="img-fluid"</a
           >
         </div>
-        
+
         <div class="contact-link float-right">
           <a href="#contact" class="scrollto"></a>
         </div>
       </div>
     </header>
     <!-- End #header -->
-    
+
     <!-- ======= Hero Section ======= -->
+    <div id="count-down" data-date="2023-1-28 00:00:00"></div>
+
     <section id="hero">
       <div class="hero-container">
-        <div style="width: 40vw;" >
-        <div class="timing">
-          <div id="count-down" data-date="2023-1-28 00:00:00"></div>
-        </div>
+        <div class="timing" style="color: #c80815">
+        <b><p id="demo"></p></b>
+        <p id="unit"></p>
       </div>
-            <!-- /.timing -->
-        <h1>KỶ NIỆM 15 NĂM THÀNH LẬP</h1>
-        <h1 style="color: #c80815">28/01/2008 – 28/01/2023</h1>
+      <!-- /.timing -->
+      <h1>KỶ NIỆM 15 NĂM THÀNH LẬP</h1>
+      <h1 style="color: #c80815">28/01/2008 – 28/01/2023</h1>
     </section>
     <!-- End Hero -->
 
@@ -132,20 +137,45 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/jquery.placeholder.js"></script>
     <script>
-      $("#count-down").TimeCircles({
-        circle_bg_color: "#FFFFF0",
-        use_background: true,
-        bg_width: 1,
-        fg_width: 0.02,
-        text_size: 0.04,
-        number_size: 0.23,
-        time: {
-          Days: { text: 'Countdown', color: "#c80815", show: true },
-          Hours: { text: '', color: "#c80815", show: false },
-          Minutes: { text: '', color: "#c80815", show: false },
-          Seconds: { text: '', color: "#c80815", show: false },
-        },
-      });
+      // $("#count-down").TimeCircles({
+      //   circle_bg_color: "#FFFFF0",
+      //   use_background: true,
+      //   bg_width: 1,
+      //   fg_width: 0.02,
+      //   text_size: 0.04,
+      //   number_size: 0.23,
+      //   time: {
+      //     Days: { text: 'Countdown', color: "#c80815", show: true },
+      //     Hours: { text: '', color: "#c80815", show: false },
+      //     Minutes: { text: '', color: "#c80815", show: false },
+      //     Seconds: { text: '', color: "#c80815", show: false },
+      //   },
+      // });
+
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jan 28, 2023 00:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days;
+        document.getElementById("unit").innerHTML = " Ngày";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
     </script>
   </body>
 </html>
