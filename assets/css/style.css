@@ -459,7 +459,7 @@ section {
 
 .timing {
   margin-top: 30px;
-  margin-bottom: 14vh;
+  margin-bottom: 5vh;
 }
 .time_circles > div > h4 {
   color: #c80815;
@@ -469,7 +469,9 @@ section {
 }
 
 #demo {
-  font-size: 1600%;
+  font-size: 2500%;
+  font-size: 50vh;
+  line-height: 50vh;
 }
 
 #unit {
