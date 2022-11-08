@@ -112,9 +112,9 @@ h6,
   padding: 0 15px;
 }
 
-#hero h1 {  
+#hero h1 {
   margin: 0 0 10px 0;
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -209,7 +209,7 @@ h6,
   margin: 0 8px;
 }
 
-#hero .php-email-form button[type=submit] {
+#hero .php-email-form button[type="submit"] {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -224,7 +224,7 @@ h6,
   background: #4f92af;
 }
 
-#hero .php-email-form button[type=submit]:hover {
+#hero .php-email-form button[type="submit"]:hover {
   background: transparent;
   color: #fff;
   border: 2px solid #fff;
@@ -338,7 +338,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -383,7 +383,7 @@ section {
   border-color: #4f92af;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #4f92af;
   border: 0;
   padding: 10px 24px;
@@ -391,7 +391,7 @@ section {
   transition: 0.4s;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #72a8bf;
 }
 
@@ -458,11 +458,11 @@ section {
 ----------------------------------------*/
 
 .timing {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .time_circles > div > h4 {
-	color: #c80815;
+  color: #c80815;
 }
 .time_circles > div > span {
-	color: #c80815;
+  color: #c80815;
 }
